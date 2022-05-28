@@ -1,6 +1,6 @@
 # kvm-auto-deploy
 
-## Useage
+## Usage
 
 1. Create bridge on KVM before use this script
 
@@ -44,7 +44,7 @@ ssh_pwauth: True
 4. metadata
 
 ```dotnetcli
-echo "instance-id: ubuntu2
+echo "instance-id: ubuntu
 network-interfaces: |
   iface ens3 inet static
   address 192.168.85.76
@@ -52,7 +52,7 @@ network-interfaces: |
   netmask 255.255.255.0
   broadcast 192.168.85.255
   gateway 192.168.85.1
-hostname: ubuntu2
+hostname: ubuntu
 " | tee metadata
 ```
 
@@ -66,10 +66,10 @@ genisoimage -output cloudinit.iso -V cidata -r -J user-data meta-data
 
 ```dotnetcli
 virt-install \
-  --name ubuntu2 \
-  --vcpu=4 \
-  --ram=8192 \
-  --disk path=ubsrv2-root-disk.qcow2,device=disk,bus=virtio \
+  --name ubuntu \
+  --vcpu=1 \
+  --ram=1024 \
+  --disk path=ubsrv-root-disk.qcow2,device=disk,bus=virtio \
   --disk path=cloudinit.iso,device=cdrom \
   --os-type linux \
   --os-variant ubuntu20.04 \
