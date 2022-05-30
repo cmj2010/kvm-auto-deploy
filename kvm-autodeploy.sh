@@ -92,6 +92,7 @@ network-interfaces: |
   netmask 255.255.255.0
   broadcast $NET.255
   gateway $GATEWAY
+  dns-nameservers 114.114.114.114 223.5.5.5
 
 _EOF_
 
