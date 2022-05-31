@@ -98,6 +98,7 @@ _EOF_
 
     echo "$(date -R) Copying template image..."
     cp $IMAGE $DISK
+    qemu-img resize $DISK 60G
 
     # Create CD-ROM ISO with cloud-init config
     echo "$(date -R) Generating ISO for cloud-init..."
