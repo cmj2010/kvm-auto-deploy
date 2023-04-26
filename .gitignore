@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.terraform/providers/registry.terraform.io/telmate/proxmox/2.9.14/darwin_amd64
+.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64
