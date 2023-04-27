@@ -2,7 +2,7 @@
 
 # Take one argument from the commandline: VM name
 if ! [ $# -eq 3 ]; then
-    echo "Usage: $0 <node-name> <IP ADDRESS> <GATEWAY> <NET>"
+    echo "Usage: $0 <node-name> <IP ADDRESS> <GATEWAY>"
     exit 1
 fi
 
