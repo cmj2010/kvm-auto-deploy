@@ -107,6 +107,8 @@ EOF
     echo "$(date -R) Create logdisk 10G"
     qemu-img create -f qcow2 log.qcow2 10G >>$1.log
     qm importdisk $1 log.qcow2 local-lvm >>$1.log
+    echo "$(date -R) Link log disk..."
+    qm set $1 --scsihw virtio-scsi-pci --scsi1 local-lvm:vm-$1-disk-2 >> $1.log
 
     # # Eject cdrom
     # echo "$(date -R) Cleaning up cloud-init..."
