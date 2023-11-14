@@ -78,3 +78,7 @@ virt-install \
   --network bridge=br-85,model=virtio \
   --import
 ```
+
+- Visitor Count
+
+![Visitor Count](https://profile-counter.glitch.me/cmj2010/count.svg)
