@@ -79,6 +79,3 @@ virt-install \
   --import
 ```
 
-- Visitor Count
-
-![Visitor Count](https://profile-counter.glitch.me/cmj2010/count.svg)
