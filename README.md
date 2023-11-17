@@ -79,4 +79,3 @@ virt-install \
   --import
 ```
 
-test
